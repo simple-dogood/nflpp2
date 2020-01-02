@@ -71,7 +71,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">Pick'em </a>
+          <a class="nav-item nav-link" href="{%url 'view_games'%}">Pick'em </a>
           <a class="nav-item nav-link" href="#">Standings</a>
 
         </div>
@@ -114,7 +114,7 @@
 </br>
 </br>
 
-
+<h4 style="padding-left:0px;">Make Selections</h4>
 
 <form method="post" style="float: left; padding-right:10px; padding-bottom:25px; font-size:13px">
 {% csrf_token %}
@@ -149,120 +149,6 @@
 </form>
 
 
-
-<form  method="post" style="float: left; padding-right:10px; padding-bottom:25px; font-size:13px">
-{% csrf_token %}
-{{form2.non_field_errors}}
-{{form2.source}}
-<table border="0.5" >
-  <tr>
-    <th>{{form2.game.label_tag}}</th>
-    <td>{{form2.game}}</td>
-  </tr>
-  <tr>
-    <th>Player</th>
-    <td>
-      {{form2.player.errors}}
-      {{form2.player}}
-    </td>
-  </tr>
-  <tr>
-    <th>{{form2.team_selected.label_tag}}</th>
-    <td>
-      {{form2.team_selected.errors}}
-      {{form2.team_selected}}
-    </td>
-  </tr>
-  <tr>
-    <th>{{form2.total_selected.label_tag}}</th>
-    <td>
-      {{form2.total_selected.errors}}
-      {{form2.total_selected}}
-    </td>
-  </tr>
-
-</table>
-
-<button type="submit">Submit</button>
-</form>
-
-
-
-<form  method="post" style="float: left; padding-right:10px; padding-bottom:25px; font-size:13px">
-{% csrf_token %}
-{{form3.non_field_errors}}
-{{form3.source.errors}}
-{{form3.source}}
-<table border="0.5" >
-  <tr>
-    <th>{{form3.game.label_tag}}</th>
-    <td>{{form3.game}}</td>
-  </tr>
-  <tr>
-    <th>Player</th>
-    <td>
-      {{form3.player.errors}}
-      {{form3.player}}
-    </td>
-  </tr>
-  <tr>
-    <th>{{form3.team_selected.label_tag}}</th>
-    <td>
-      {{form3.team_selected.errors}}
-      {{form3.team_selected}}
-    </td>
-  </tr>
-  <tr>
-    <th>{{form3.total_selected.label_tag}}</th>
-    <td>
-      {{form3.total_selected.errors}}
-      {{form3.total_selected}}
-    </td>
-  </tr>
-
-</table>
-
-<button type="submit">Submit</button>
-</form>
-
-
-<form  method="post" style="float: left; padding-right:10px; padding-bottom:25px; font-size:13px">
-{% csrf_token %}
-{{form4.non_field_errors}}
-{{form4.source.errors}}
-{{form4.source}}
-<table border="0.5" >
-  <tr>
-    <th>{{form4.game.label_tag}}</th>
-    <td>{{form4.game}}</td>
-  </tr>
-  <tr>
-    <th>Player</th>
-    <td>
-      {{form4.player.errors}}
-      {{form4.player}}
-    </td>
-  </tr>
-  <tr>
-    <th>{{form4.team_selected.label_tag}}</th>
-    <td>
-      {{form4.team_selected.errors}}
-      {{form4.team_selected}}
-    </td>
-  </tr>
-  <tr>
-    <th>{{form4.total_selected.label_tag}}</th>
-    <td>
-      {{form4.total_selected.errors}}
-      {{form4.total_selected}}
-    </td>
-  </tr>
-
-</table>
-
-<button type="submit">Submit</button>
-</form>
-
 </br>
 </br>
 </br>
@@ -270,22 +156,25 @@
 </br>
 </br></br>
 
+
+<h4 style="padding-left:0px;">Current Picks</h4>
+
 <table class="table table-striped table-sm" style="float: left; font-size:13px">
   <thead>
     <tr>
-      <th>Game</th>
       <th>Player</th>
       <th>Selection</th>
       <th>Under/Over</th>
+      <th>Created</th>
     </tr>
   </thead>
   <tbody>
     {% for c in chc.all %}
     <tr>
-      <td>{{c.game}}</td>
       <td>{{c.player}}</td>
       <td>{{c.team_selected}}</td>
       <td>{{c.total_selected}}</td>
+      <td>{{c.created}}</td>
     </tr>
   {% endfor %}
   </tbody>
