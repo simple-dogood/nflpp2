@@ -15,7 +15,7 @@ game_2_teams = (('Tennessee','Tennessee'),('New England','New England'))
 game_3_teams = (('Minnesota','Minnesota'),('New Orleans','New Orleans'))
 game_4_teams = (('Seattle','Seattle'),('Philadelphia','Philadelphia'))
 
-under_over = (('Under','Under'),('Over','Over'))
+under_over = (('N/A','N/A'),('Under','Under'),('Over','Over'))
 
 
 class ChoiceForm(ModelForm):
