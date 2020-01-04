@@ -18,10 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 #from django.conf.urls.static import static
-#import jobs.views
+import picks.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('standings/',include('standings.urls')),
     path('picks/',include('picks.urls')),
+    path('',picks.views.view_games,name='home'),
 ]
