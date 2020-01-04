@@ -8,7 +8,7 @@ import pandas as pd
 
 pnt = os.getcwd()
 
-df=pd.read_csv('/Users/briandougherty/django-sites/nflpp/picks/week2.csv')
+df=pd.read_csv('/home/djangodeploy/nflpp2/picks/week2.csv')
 
 #print(df)
 
