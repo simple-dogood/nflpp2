@@ -4,7 +4,7 @@ from django import forms
 from django.forms import ModelForm
 from .models import Choice
 
-players = (('Select Name','Select Name'),('Mac','Mac'),('Mullen','Mullen'),('Bdoc','Bdoc'),('Campbell','Campbell'),('Harbs','Harbs'),('Meat','Meat'),('Minas','Minas'),('Tony','Tony'))
+players = (('Select Name','Select Name'),('Pex','Pex'),('Mac','Mac'),('Mullen','Mullen'),('Bdoc','Bdoc'),('Campbell','Campbell'),('Harbs','Harbs'),('Meat','Meat'),('Minas','Minas'),('Tony','Tony'))
 
 match_ups = (('Buffalo','Buffalo'),('Houston','Houston'),('Tennessee','Tennessee'),('New England','New England'),
 ('Minnesota','Minnesota'),('New Orleans','New Orleans'),('Seattle','Seattle'),('Philadelphia','Philadelphia'),)
