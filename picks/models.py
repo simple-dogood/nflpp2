@@ -20,7 +20,7 @@ class games_new(models.Model):
 
 class Choice(models.Model):
     player = models.CharField(max_length = 30)
-    #game = models.CharField(max_length=30)
+    game = models.CharField(max_length=30,default='')
     team_selected = models.CharField(max_length=30)
     total_selected = models.CharField(max_length=10)
     created = models.DateTimeField(auto_now_add=True)
