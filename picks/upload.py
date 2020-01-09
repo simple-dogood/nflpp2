@@ -18,8 +18,8 @@ row_flow = df2.iterrows()
 
 objs2 = [
     Stand(
-        player = row['player'],
-        score = row['score'],
+        player = row['Player'],
+        score = row['Score'],
 
     )
 
