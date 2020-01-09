@@ -1,6 +1,6 @@
 from django.db import models
 import os
-from picks.models import games_new
+from picks.models import games_new, Stand
 
 
 
@@ -17,7 +17,7 @@ df2=pd.read_csv('/home/djangodeploy/nflpp2/picks/week1_stnd.csv')
 row_flow = df2.iterrows()
 
 objs2 = [
-    stand(
+    Stand(
         player = row['player'],
         score = row['score'],
 
