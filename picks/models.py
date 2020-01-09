@@ -24,7 +24,12 @@ class Choice(models.Model):
     team_selected = models.CharField(max_length=30)
     total_selected = models.CharField(max_length=10)
     created = models.DateTimeField(auto_now_add=True)
-    tst4 = models.CharField(max_length=30,default=0)
+    g_id = models.CharField(max_length=30,default=0)
+
+    def combo(self):
+        return str(self.player)+"_"+str(self.game)
+
+    g_id = combo()
 
     def __str__(self):
         return str(self.player)
