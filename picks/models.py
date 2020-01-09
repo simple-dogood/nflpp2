@@ -28,8 +28,17 @@ class Choice(models.Model):
     tst4 = models.CharField(max_length=30,default='')
 
 
+    def __str__(self):
+        return str(self.player)
 
 
+class Choice2(models.Model):
+    player = models.CharField(max_length = 30)
+    game = models.CharField(max_length=30)
+    team_selected = models.CharField(max_length=30)
+    total_selected = models.CharField(max_length=10)
+    created = models.DateTimeField(auto_now_add=True)
+    g_id = str(player)+"_"+str(game)
 
     def __str__(self):
         return str(self.player)
