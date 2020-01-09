@@ -32,6 +32,10 @@ class Choice(models.Model):
         return str(self.player)
 
 
+class Stand(models.Model):
+    player = models.CharField(max_length=30)
+    score = models.IntegerField()
+
 class Choice2(models.Model):
     player = models.CharField(max_length = 30)
     game = models.CharField(max_length=30)

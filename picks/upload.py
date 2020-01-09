@@ -9,8 +9,25 @@ import pandas as pd
 pnt = os.getcwd()
 
 df=pd.read_csv('/home/djangodeploy/nflpp2/picks/week2.csv')
+df2=pd.read_csv('/home/djangodeploy/nflpp2/picks/week1_stnd.csv')
 
 #print(df)
+
+
+row_flow = df2.iterrows()
+
+objs2 = [
+    stand(
+        player = row['player'],
+        score = row['score'],
+
+    )
+
+    for index, row in row_flow
+]
+
+Stand.objects.bulk_create(obj2)
+
 
 
 row_iter = df.iterrows()
