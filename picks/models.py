@@ -25,6 +25,7 @@ class Choice(models.Model):
     total_selected = models.CharField(max_length=10)
     created = models.DateTimeField(auto_now_add=True)
     g_id = str(player)+"_"+str(game)
+    tst4 = models.CharField(max_length=30)
 
 
 
