@@ -26,7 +26,7 @@ objs2 = [
     for index, row in row_flow
 ]
 
-Stand.objects.bulk_create(obj2)
+Stand.objects.bulk_create(objs2)
 
 
 
