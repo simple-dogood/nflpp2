@@ -9,7 +9,7 @@ players = (('Select Name','Select Name'),('Pex','Pex'),('Mac','Mac'),('Mullen','
 match_ups = (('Buffalo','Buffalo'),('Houston','Houston'),('Tennessee','Tennessee'),('New England','New England'),
 ('Minnesota','Minnesota'),('New Orleans','New Orleans'),('Seattle','Seattle'),('Philadelphia','Philadelphia'),)
 
-week = (('Week 2','Week 2'))
+pwk = (('Week 2','Week 2'),('N/A','N/A'))
 
 game_1_teams = (('Buffalo','Buffalo'),('Houston','Houston'))
 game_2_teams = (('Tennessee','Tennessee'),('New England','New England'))
@@ -25,7 +25,7 @@ under_over = (('N/A','N/A'),('Under','Under'),('Over','Over'))
 #         fields = ['player','team_selected','total_selected']
 
 class ChoiceForm1(ModelForm):
-    game = forms.ChoiceField(choices=week,required=True)
+    game = forms.ChoiceField(choices=pwk,required=True)
     player = forms.ChoiceField(choices=players,required=True)
     team_selected = forms.ChoiceField(choices=match_ups,required=True)
     total_selected = forms.ChoiceField(choices=under_over,required=True)
