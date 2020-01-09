@@ -2,7 +2,7 @@
 
 from django import forms
 from django.forms import ModelForm
-from .models import Choice
+from .models import Choice2
 
 players = (('Select Name','Select Name'),('Pex','Pex'),('Mac','Mac'),('Mullen','Mullen'),('Bdoc','Bdoc'),('Campbell','Campbell'),('Harbs','Harbs'),('Meat','Meat'),('Minas','Minas'),('Tony','Tony'))
 
@@ -18,11 +18,11 @@ game_4_teams = (('Seattle','Seattle'),('Philadelphia','Philadelphia'))
 
 under_over = (('N/A','N/A'),('Under','Under'),('Over','Over'))
 
-
-class ChoiceForm(ModelForm):
-    class Meta:
-        model = Choice
-        fields = ['player','team_selected','total_selected']
+# 
+# class ChoiceForm(ModelForm):
+#     class Meta:
+#         model = Choice
+#         fields = ['player','team_selected','total_selected']
 
 class ChoiceForm1(ModelForm):
     game = forms.ChoiceField(choices=week,required=True)
