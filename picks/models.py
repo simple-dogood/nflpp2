@@ -38,7 +38,11 @@ class Choice2(models.Model):
     team_selected = models.CharField(max_length=30)
     total_selected = models.CharField(max_length=10)
     created = models.DateTimeField(auto_now_add=True)
-    g_id = str(player)+"_"+str(game)
+
+    def save(self,*args,**kwargs):
+        self.g_id = str(self.player)+"_"+str(self.game)
+        super(Participant,self).save(*args, **kwargs)
+        
 
     def __str__(self):
         return str(self.player)
