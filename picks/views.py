@@ -13,7 +13,7 @@ def view_games(request):
         form1 = ChoiceForm1(request.POST)
         if form1.is_valid():
             u = form1.save()
-            Choice2.save()
+            #Choice2.save()
             return HttpResponseRedirect('/picks/')
     else:
         form1 = ChoiceForm1()
