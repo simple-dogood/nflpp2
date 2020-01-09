@@ -26,10 +26,13 @@ class Choice(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     g_id = models.CharField(max_length=30,default=0)
 
+    @property
     def combo(self):
         return str(self.player)+"_"+str(self.game)
 
     g_id = combo()
+
+
 
     def __str__(self):
         return str(self.player)
