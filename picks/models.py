@@ -41,8 +41,8 @@ class Choice2(models.Model):
 
     def save(self,*args,**kwargs):
         self.g_id = str(self.player)+"_"+str(self.game)
-        super(Participant,self).save(*args, **kwargs)
-        
+        super(Choice2,self).save(*args, **kwargs)
+
 
     def __str__(self):
         return str(self.player)
