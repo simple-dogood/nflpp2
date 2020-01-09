@@ -30,4 +30,4 @@ class ChoiceForm1(ModelForm):
     total_selected = forms.ChoiceField(choices=under_over,required=True)
     class Meta:
         model = Choice
-        fields = ['player','team_selected','total_selected','tst']
+        fields = ['player','team_selected','total_selected']
