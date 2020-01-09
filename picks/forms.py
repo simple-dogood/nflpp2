@@ -18,7 +18,7 @@ game_4_teams = (('Seattle','Seattle'),('Philadelphia','Philadelphia'))
 
 under_over = (('N/A','N/A'),('Under','Under'),('Over','Over'))
 
-# 
+#
 # class ChoiceForm(ModelForm):
 #     class Meta:
 #         model = Choice
@@ -31,4 +31,4 @@ class ChoiceForm1(ModelForm):
     total_selected = forms.ChoiceField(choices=under_over,required=True)
     class Meta:
         model = Choice2
-        fields = ['player','team_selected','total_selected']
+        fields = ['game','player','team_selected','total_selected']
