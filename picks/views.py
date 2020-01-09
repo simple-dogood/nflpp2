@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import games_new,Choice2
-from .forms import ChoiceForm, ChoiceForm1#, ChoiceForm2, ChoiceForm3, ChoiceForm4
+from .forms import ChoiceForm1#, ChoiceForm2, ChoiceForm3, ChoiceForm4
 from django.http import HttpResponseRedirect
 from django.forms import modelformset_factory
 
