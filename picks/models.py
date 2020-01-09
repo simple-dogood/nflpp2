@@ -24,7 +24,7 @@ class Choice(models.Model):
     team_selected = models.CharField(max_length=30)
     total_selected = models.CharField(max_length=10)
     created = models.DateTimeField(auto_now_add=True)
-    tst3 = models.CharField(max_length=30,default='abc')
+    tst4 = models.CharField(max_length=30,default=0)
 
     def __str__(self):
         return str(self.player)
