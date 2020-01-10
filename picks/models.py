@@ -51,7 +51,7 @@ class PickManager(models.Manager):
 
 class Choice2(models.Model):
     def game_flag(self):
-        if self.team_selected in ['Minnesota','San Fram']:
+        if self.team_selected in ['Minnesota','San Fran']:
             return 'Game 1'
         elif self.team_selected in ['Tennessee','Baltimore']:
             return 'Game 2'
