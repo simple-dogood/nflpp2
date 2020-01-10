@@ -44,10 +44,10 @@ class PickManager(models.Manager):
             SELECT *
             FROM picks_choice2 Order By created DESC""")
         result_list = []
-        for row in cursor.fetchall():
-            p = self.model(player=row[0],team_selected=row[1],total_selected=row[2],created=row[4])
-            result_list.append(p)
-            return result_list
+            for row in cursor.fetchall():
+                p = self.model(player=row[0],team_selected=row[1],total_selected=row[2],created=row[4])
+                result_list.append(p)
+        return result_list
 
 class Choice2(models.Model):
     player = models.CharField(max_length = 30)
