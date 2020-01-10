@@ -40,7 +40,7 @@ class PickManager(models.Manager):
     def last_pick(self):
         from django.db import connection
         with connection.cursor() as cursor:
-            cursor.execute("""SELECT DISTINCT ON (g_id) * from picks_choice2 order by g_id,created""")
+            cursor.execute("""SELECT DISTINCT ON (g_id) * from picks_choice2 order by g_id,created DESC""")
             result_list = []
             for row in cursor.fetchall():
                 p = self.model(player=row[1],team_selected=row[3],total_selected=row[4])
