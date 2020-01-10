@@ -8,7 +8,7 @@ def view_games(request):
     stnd = Stand.objects
     gms = games_new.objects
     chc = Choice2.objects
-    chc_slct = Choice2.last_pick.objects
+    chc_slct = Choice2.last_pick.result_list
 
 
     if request.method == 'POST':
