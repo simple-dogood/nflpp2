@@ -74,7 +74,7 @@ class Choice2(models.Model):
 
 
     def save(self,*args,**kwargs):
-        game_2 = Choice2.game_flag(self)
+        self.game_2 = Choice2.game_flag(self)
         self.g_id = str(self.player)+"_"+str(self.game)+"_"+str(self.game_2)
 
         super(Choice2,self).save(*args, **kwargs)
