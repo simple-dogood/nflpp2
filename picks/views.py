@@ -7,7 +7,7 @@ from django.forms import modelformset_factory
 def view_games(request):
     stnd = Stand.objects
     gms = games_new.objects
-    chc = Choice2.objects
+    chc = Choice2.objects.last_pick()
     #chc_slct = Choice2.last_pick()
 
 
