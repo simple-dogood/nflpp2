@@ -40,7 +40,7 @@ class PickManager(models.Manager):
     def last_pick(self):
         from django.db import connection
         with connection.cursor() as cursor:
-            cusor.execute("""
+            cursor.execute("""
             SELECT *
             FROM picks_choice2 Order By created DESC""")
         result_list = []
