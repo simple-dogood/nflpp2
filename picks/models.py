@@ -43,7 +43,7 @@ class PickManager(models.Manager):
             cursor.execute("""
             SELECT *
             FROM picks_choice2 Order By created DESC""")
-        result_list = []
+            result_list = []
             for row in cursor.fetchall():
                 p = self.model(player=row[0],team_selected=row[1],total_selected=row[2],created=row[4])
                 result_list.append(p)
