@@ -47,7 +47,21 @@ class PickManager(models.Manager):
                 result_list.append(p)
         return result_list
 
+
+
 class Choice2(models.Model):
+    def game_flag(self):
+        if self.team_selected in ['Minnesota','San Fram']:
+            return 'Game 1'
+        elif self.team_selected in ['Tennessee','Baltimore']:
+            return 'Game 2'
+        elif self.team_selected in ['Houston','Kansas City']:
+            return 'Game 3'
+        elif self.team_selected in ['Seattle','Green Bay']:
+            return 'Game 4'
+        else:
+            return 'Missing Team'
+
     player = models.CharField(max_length = 30)
     game = models.CharField(max_length=30)
     team_selected = models.CharField(max_length=30)
@@ -55,6 +69,9 @@ class Choice2(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     g_id = models.CharField(max_length=50)
     objects = PickManager()
+    game_2 = game_flag()
+
+
 
     def save(self,*args,**kwargs):
         self.g_id = str(self.player)+"_"+str(self.game)

@@ -6,8 +6,7 @@ from .models import Choice2
 
 players = (('Select Name','Select Name'),('Pex','Pex'),('Mac','Mac'),('Mullen','Mullen'),('Bdoc','Bdoc'),('Campbell','Campbell'),('Harbs','Harbs'),('Meat','Meat'),('Minas','Minas'),('Tony','Tony'))
 
-match_ups = (('Buffalo','Buffalo'),('Houston','Houston'),('Tennessee','Tennessee'),('New England','New England'),
-('Minnesota','Minnesota'),('New Orleans','New Orleans'),('Seattle','Seattle'),('Philadelphia','Philadelphia'),)
+match_ups = (('Minnesota','Minnesota'),('San Fran','San Fran'),('Tennessee','Tennessee'),('Baltimore','Baltimore'),('Houston','Houston'),('Kansas City','Kansas City'),('Seattle','Seattle'),('Green Bay','Green Bay'),)
 
 pwk = (('Week 2','Week 2'),('N/A','N/A'))
 
