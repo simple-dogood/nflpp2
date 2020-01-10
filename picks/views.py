@@ -8,17 +8,17 @@ def view_games(request):
     stnd = Stand.objects
     gms = games_new.objects
     chc = Choice2.objects
+    chc_slct = Choice2.last_pick.objects
 
 
     if request.method == 'POST':
         form1 = ChoiceForm1(request.POST)
         if form1.is_valid():
             u = form1.save()
-            #Choice2.save(self)
             return HttpResponseRedirect('/picks/')
     else:
         form1 = ChoiceForm1()
 
 
 
-    return render(request,'picks/schedule_n_picks.html',{'stnd':stnd,'gms':gms,'form1':form1,'chc':chc})
+    return render(request,'picks/schedule_n_picks.html',{'stnd':stnd,'gms':gms,'form1':form1,'chc':chc,'chc_slct':chc_slct})
