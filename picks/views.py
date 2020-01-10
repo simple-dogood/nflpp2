@@ -8,7 +8,7 @@ def view_games(request):
     stnd = Stand.objects
     gms = games_new.objects
     chc = Choice2.objects
-    chc_slct = Choice2.last_pick()
+    #chc_slct = Choice2.last_pick()
 
 
     if request.method == 'POST':
@@ -21,4 +21,4 @@ def view_games(request):
 
 
 
-    return render(request,'picks/schedule_n_picks.html',{'stnd':stnd,'gms':gms,'form1':form1,'chc':chc,'chc_slct':chc_slct})
+    return render(request,'picks/schedule_n_picks.html',{'stnd':stnd,'gms':gms,'form1':form1,'chc':chc})

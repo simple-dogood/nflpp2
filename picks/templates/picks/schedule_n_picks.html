@@ -195,7 +195,7 @@
     </tr>
   </thead>
   <tbody>
-    {% for c in chc_slct.all %}
+    {% for c in c.result_list%}
     <tr>
       <td>{{c.player}}</td>
       <td>{{c.team_selected}}</td>
