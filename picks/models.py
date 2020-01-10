@@ -69,7 +69,7 @@ class Choice2(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     g_id = models.CharField(max_length=50)
     objects = PickManager()
-    game_2 = game_flag()
+    game_2 = self.game_flag()
 
 
 
