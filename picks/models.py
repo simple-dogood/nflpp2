@@ -48,6 +48,19 @@ class Choice2(models.Model):
         self.g_id = str(self.player)+"_"+str(self.game)
         super(Choice2,self).save(*args, **kwargs)
 
+    def last_pick(self):
+        from django.db import connection
+        with connection.cursor() as cursor:
+            cusor.execute("""
+            SELECT DISTINCT ON (g_id) player, team_selected, total_selected, created
+            FROM picks_Choice2 Order By created DESC""")
+        result_list = []
+        for row in cursor.fetchall():
+            p = self.model(player=row[0],team_selected=row[1],total_selected=row[2],created=row[4])
+            result_list.append(p)
+            return result_list
+
+
 
     def __str__(self):
         return str(self.player)
