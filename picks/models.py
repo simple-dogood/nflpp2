@@ -69,12 +69,13 @@ class Choice2(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     g_id = models.CharField(max_length=50)
     objects = PickManager()
-    game_2 = self.game_flag()
+
 
 
 
     def save(self,*args,**kwargs):
         self.g_id = str(self.player)+"_"+str(self.game)
+        game_2 = game_flag()
         super(Choice2,self).save(*args, **kwargs)
 
 
