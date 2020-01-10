@@ -42,7 +42,7 @@ class PickManager(models.Manager):
         with connection.cursor() as cursor:
             cursor.execute("""
             SELECT DISTINCT g_id, player, team_selected, total_selected
-            FROM picks_Choice2 Order By g_id DESC""")
+            FROM picks_Choice2 Order By created DESC""")
             result_list = []
             for row in cursor.fetchall():
                 p = self.model(player=row[1],team_selected=row[2],total_selected=row[3])
