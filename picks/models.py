@@ -41,7 +41,7 @@ class PickManager(models.Manager):
         from django.db import connection
         with connection.cursor() as cursor:
             cursor.execute("""
-            CREATE TABLE t1(SELECT * FROM picks_Choice2 Order By created);
+            CREATE TABLE t1 as (SELECT * FROM picks_Choice2 Order By created);
             SELECT DISTINCT g_id, player, team_selected, total_selected FROM t1""")
             result_list = []
             for row in cursor.fetchall():
