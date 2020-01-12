@@ -2,9 +2,17 @@ from django.db import models
 import os
 from picks.models import games_new, Stand
 
-
+#
 
 import pandas as pd
+
+
+data = games_new.objects.all()
+# Delete data
+data.delete()
+
+data2 = Stand.objects.all()
+data2.delete()
 
 pnt = os.getcwd()
 
