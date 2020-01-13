@@ -59,6 +59,8 @@ class Choice2(models.Model):
             return 'Game 3'
         elif self.team_selected in ['Seattle','Green Bay']:
             return 'Game 4'
+        elif self.team_selected in ['Clemson','LSU']:
+            return 'Game 5'
         else:
             return 'Missing Team'
 
