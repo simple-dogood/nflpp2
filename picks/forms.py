@@ -9,7 +9,7 @@ players = (('Select Name','Select Name'),('Pex','Pex'),('Mac','Mac'),('Mullen','
 match_ups = (('San Fran','San Fran'),('Green Bay','Green Bay'),('Tennessee','Tennessee'),('Kansas City','Kansas City'),)
 
 
-pwk = (('CFB','CFB'),('N/A','N/A'))
+pwk = (('Week 3','Week 3'),('N/A','N/A'))
 
 game_1_teams = (('Buffalo','Buffalo'),('Houston','Houston'))
 game_2_teams = (('Tennessee','Tennessee'),('New England','New England'))
