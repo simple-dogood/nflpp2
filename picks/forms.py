@@ -6,10 +6,10 @@ from .models import Choice2
 
 players = (('Select Name','Select Name'),('Pex','Pex'),('Mac','Mac'),('Mullen','Mullen'),('Bdoc','Bdoc'),('Campbell','Campbell'),('Harbs','Harbs'),('Meat','Meat'),('Minas','Minas'),('Tony','Tony'))
 
-match_ups = (('San Fran','San Fran'),('Green Bay','Green Bay'),('Tennessee','Tennessee'),('Kansas City','Kansas City'),)
+match_ups = (('San Fran','San Fran'),('Kansas City','Kansas City'),)
 
 
-pwk = (('Week 3','Week 3'),('N/A','N/A'))
+pwk = (('SB','SB'),('N/A','N/A'))
 
 game_1_teams = (('Buffalo','Buffalo'),('Houston','Houston'))
 game_2_teams = (('Tennessee','Tennessee'),('New England','New England'))
